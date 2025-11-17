@@ -1,0 +1,272 @@
+[
+  {
+    "day": 1,
+    "time": "09:00",
+    "title": "Abertura e Welcome Coffee",
+    "speaker": "Organização Tech Start Summit",
+    "location": "Auditório Principal",
+    "type": "Opening",
+    "color": "purple",
+    "bio": "Dê as boas-vindas ao Tech Start Summit! Aproveite nosso coffee networking e prepare-se para dois dias intensivos de aprendizado e conexões."
+  },
+  {
+    "day": 1,
+    "time": "09:30",
+    "title": "O Estado da Tecnologia no Brasil",
+    "speaker": "Maria Silva",
+    "location": "Auditório Principal",
+    "type": "Keynote",
+    "color": "purple",
+    "bio": "Uma análise profunda sobre o ecossistema tecnológico brasileiro, seus desafios e oportunidades. Descubra como o Brasil está se posicionando no cenário global de inovação e quais são as tendências que moldarão o futuro do setor nos próximos anos."
+  },
+  {
+    "day": 1,
+    "time": "09:30",
+    "title": "Choque de Realidade: Big Data na Prática",
+    "speaker": "Cristiano Costa",
+    "location": "Sala Tech A",
+    "type": "Palestra",
+    "color": "blue",
+    "bio": "Saia da teoria e mergulhe em cases reais de implementação de Big Data. Entenda os desafios práticos, as escolhas tecnológicas e os resultados mensuráveis de projetos que transformaram negócios através da análise de dados em larga escala."
+  },
+  {
+    "day": 1,
+    "time": "10:30",
+    "title": "Do Campus ao Cloud: Carreira em DevOps",
+    "speaker": "Ana Rodrigues",
+    "location": "Sala Tech A",
+    "type": "Palestra",
+    "color": "orange",
+    "bio": "Um guia prático para iniciar e acelerar sua carreira em DevOps. Aprenda sobre as habilidades essenciais, certificações relevantes e como construir um portfólio que chama atenção dos recrutadores. Inclui dicas de transição de carreira e caminhos de crescimento."
+  },
+  {
+    "day": 1,
+    "time": "10:30",
+    "title": "IA Generativa: Além do Hype",
+    "speaker": "Dr. Roberto Santos",
+    "location": "Auditório Principal",
+    "type": "Palestra",
+    "color": "green",
+    "bio": "Descubra as aplicações reais de IA Generativa além do buzz. Explore casos de uso práticos, limitações técnicas, considerações éticas e como integrar essas tecnologias em projetos reais de forma responsável e eficiente."
+  },
+  {
+    "day": 1,
+    "time": "11:30",
+    "title": "Coffee Break",
+    "speaker": "",
+    "location": "Área de Networking",
+    "type": "Break",
+    "color": "gray",
+    "bio": "Momento para recarregar as energias, fazer networking e trocar experiências com outros participantes."
+  },
+  {
+    "day": 1,
+    "time": "12:00",
+    "title": "Almoço e Networking",
+    "speaker": "",
+    "location": "Área de Networking",
+    "type": "Break",
+    "color": "gray",
+    "bio": "Almoço oferecido com espaço dedicado para networking. Conecte-se com palestrantes, patrocinadores e outros profissionais da área."
+  },
+  {
+    "day": 1,
+    "time": "13:30",
+    "title": "Segurança Cibernética: Protegendo o Futuro",
+    "speaker": "Paula Mendes",
+    "location": "Sala Tech B",
+    "type": "Palestra",
+    "color": "red",
+    "bio": "As ameaças cibernéticas evoluem constantemente. Conheça as melhores práticas de segurança, frameworks de proteção e como construir uma cultura de segurança em sua organização. Inclui demonstrações de vulnerabilidades comuns e técnicas de mitigação."
+  },
+  {
+    "day": 1,
+    "time": "13:30",
+    "title": "Startups: Do Zero ao Unicórnio",
+    "speaker": "João Martins",
+    "location": "Auditório Principal",
+    "type": "Palestra",
+    "color": "purple",
+    "bio": "A jornada completa de construção de uma startup de sucesso. Desde validação de ideia, captação de recursos, construção de equipe até escalabilidade. Aprenda com cases reais de empresas que alcançaram valuation bilionário."
+  },
+  {
+    "day": 1,
+    "time": "14:30",
+    "title": "Cloud Computing e Escalabilidade",
+    "speaker": "Fernanda Lima",
+    "location": "Sala Tech A",
+    "type": "Palestra",
+    "color": "blue",
+    "bio": "Domine os conceitos de arquitetura cloud escalável. Aprenda sobre serverless, containers, orquestração e como escolher a melhor estratégia de cloud para diferentes tipos de aplicações. Inclui comparações entre AWS, Azure e Google Cloud."
+  },
+  {
+    "day": 1,
+    "time": "14:30",
+    "title": "Mobile First: Desenvolvimento para o Futuro",
+    "speaker": "Carlos Pereira",
+    "location": "Sala Tech B",
+    "type": "Workshop",
+    "color": "orange",
+    "bio": "Workshop hands-on sobre desenvolvimento mobile moderno. Explore React Native, Flutter e desenvolvimento híbrido. Aprenda sobre performance, UX mobile e como publicar apps nas stores. Traga seu laptop!"
+  },
+  {
+    "day": 1,
+    "time": "15:30",
+    "title": "Coffee Break e Networking",
+    "speaker": "",
+    "location": "Área de Networking",
+    "type": "Break",
+    "color": "gray",
+    "bio": "Pausa para café e networking. Aproveite para trocar contatos e discutir as palestras do dia."
+  },
+  {
+    "day": 1,
+    "time": "16:00",
+    "title": "Painel: Líderes Tech do Paraná",
+    "speaker": "Painel com múltiplos convidados",
+    "location": "Auditório Principal",
+    "type": "Panel",
+    "color": "purple",
+    "bio": "Debate com líderes técnicos de empresas paranaenses. Discussão sobre o ecossistema local, oportunidades de carreira no estado, desafios de escalar times tech regionais e visões sobre o futuro da tecnologia no Sul do Brasil."
+  },
+  {
+    "day": 2,
+    "time": "09:00",
+    "title": "Recepção e Coffee",
+    "speaker": "",
+    "location": "Área de Networking",
+    "type": "Opening",
+    "color": "gray",
+    "bio": "Bom dia! Comece o segundo dia com café e prepare-se para mais conteúdo de alta qualidade."
+  },
+  {
+    "day": 2,
+    "time": "09:30",
+    "title": "Blockchain: Revolução Além das Criptomoedas",
+    "speaker": "Dra. Beatriz Souza",
+    "location": "Auditório Principal",
+    "type": "Keynote",
+    "color": "purple",
+    "bio": "Explore aplicações práticas de blockchain em supply chain, saúde, identidade digital e contratos inteligentes. Entenda a tecnologia por trás dos headlines e descubra oportunidades reais de implementação em diversos setores."
+  },
+  {
+    "day": 2,
+    "time": "09:30",
+    "title": "UX/UI: Design que Converte",
+    "speaker": "Marina Alves",
+    "location": "Sala Tech A",
+    "type": "Palestra",
+    "color": "green",
+    "bio": "Aprenda princípios de design centrado no usuário que realmente impactam conversões. Técnicas de pesquisa, prototipagem, testes A/B e como medir o sucesso de decisões de design. Cases práticos de redesigns que aumentaram métricas de negócio."
+  },
+  {
+    "day": 2,
+    "time": "10:30",
+    "title": "Workshop: APIs RESTful com Node.js",
+    "speaker": "Pedro Oliveira",
+    "location": "Sala Workshop",
+    "type": "Workshop",
+    "color": "orange",
+    "bio": "Workshop prático de construção de APIs robustas com Node.js e Express. Aprenda sobre autenticação, validação, tratamento de erros, documentação com Swagger e deploy. Você vai sair com uma API funcional pronta para produção!"
+  },
+  {
+    "day": 2,
+    "time": "10:30",
+    "title": "Machine Learning na Prática",
+    "speaker": "Juliana Ferreira",
+    "location": "Sala Tech B",
+    "type": "Palestra",
+    "color": "blue",
+    "bio": "Do dados ao modelo em produção. Entenda o pipeline completo de Machine Learning: coleta e preparação de dados, escolha de algoritmos, treinamento, validação e deploy. Inclui demonstrações práticas com Python e frameworks populares."
+  },
+  {
+    "day": 2,
+    "time": "11:30",
+    "title": "Coffee Break",
+    "speaker": "",
+    "location": "Área de Networking",
+    "type": "Break",
+    "color": "gray",
+    "bio": "Pausa para recarregar. Networking, café e snacks disponíveis."
+  },
+  {
+    "day": 2,
+    "time": "12:00",
+    "title": "Almoço e Networking",
+    "speaker": "",
+    "location": "Área de Networking",
+    "type": "Break",
+    "color": "gray",
+    "bio": "Almoço com espaço para networking. Continue as conversas iniciadas durante o evento."
+  },
+  {
+    "day": 2,
+    "time": "13:30",
+    "title": "Kubernetes e Microserviços",
+    "speaker": "Rafael Santos",
+    "location": "Auditório Principal",
+    "type": "Palestra",
+    "color": "purple",
+    "bio": "Arquitetura de microserviços com Kubernetes. Aprenda sobre orquestração de containers, service mesh, observabilidade e como gerenciar aplicações distribuídas em escala. Inclui estratégias de deploy, rollback e disaster recovery."
+  },
+  {
+    "day": 2,
+    "time": "13:30",
+    "title": "Product Management para Devs",
+    "speaker": "Camila Torres",
+    "location": "Sala Tech A",
+    "type": "Palestra",
+    "color": "green",
+    "bio": "Desenvolvedores que entendem produto criam soluções melhores. Aprenda sobre discovery, priorização, métricas de produto e como comunicar efetivamente com stakeholders. Ideal para quem quer evoluir para papéis de tech lead ou product."
+  },
+  {
+    "day": 2,
+    "time": "14:30",
+    "title": "GraphQL: O Futuro das APIs",
+    "speaker": "Lucas Mendes",
+    "location": "Sala Tech B",
+    "type": "Palestra",
+    "color": "blue",
+    "bio": "Entenda por que empresas estão migrando de REST para GraphQL. Aprenda sobre queries, mutations, subscriptions, schema design e como implementar um servidor GraphQL performático. Comparações práticas com REST."
+  },
+  {
+    "day": 2,
+    "time": "14:30",
+    "title": "Teste Automatizado: Qualidade em Escala",
+    "speaker": "Mariana Costa",
+    "location": "Sala Workshop",
+    "type": "Workshop",
+    "color": "orange",
+    "bio": "Workshop sobre cultura de testes e automação. TDD, integração contínua, testes end-to-end e como construir uma suite de testes confiável. Ferramentas modernas como Jest, Cypress e Playwright. Hands-on com exemplos práticos."
+  },
+  {
+    "day": 2,
+    "time": "15:30",
+    "title": "Coffee Break e Networking",
+    "speaker": "",
+    "location": "Área de Networking",
+    "type": "Break",
+    "color": "gray",
+    "bio": "Última pausa do evento. Aproveite para trocar contatos e marcar follow-ups."
+  },
+  {
+    "day": 2,
+    "time": "16:00",
+    "title": "Workshop: Preparação para Entrevistas Tech",
+    "speaker": "Time de Recrutadores",
+    "location": "Sala Workshop",
+    "type": "Workshop",
+    "color": "orange",
+    "bio": "Dicas práticas de recrutadores experientes. Como preparar seu currículo, LinkedIn, portfólio e se destacar em entrevistas técnicas. Simulações de coding interviews, perguntas comportamentais e negociação salarial."
+  },
+  {
+    "day": 2,
+    "time": "17:00",
+    "title": "Encerramento e Sorteios",
+    "speaker": "Organização Tech Start Summit",
+    "location": "Auditório Principal",
+    "type": "Closing",
+    "color": "purple",
+    "bio": "Fechamento oficial do Tech Start Summit com sorteios especiais de prêmios para os participantes. Agradecimentos, recap dos dois dias e anúncio da próxima edição!"
+  }
+]

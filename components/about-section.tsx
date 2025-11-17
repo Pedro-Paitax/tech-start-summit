@@ -14,7 +14,7 @@ const pillars = [
   },
   {
     icon: Network,
-    title: "Networking Qualificado", // <-- MUDANÇA DE TÍTULO
+    title: "Networking Qualificado",
     description: "Conexão direta com líderes de RH e profissionais experientes que já trilharam o caminho que você está começando.", // <-- MUDANÇA DE DESCRIÇÃO
   },
 ]
