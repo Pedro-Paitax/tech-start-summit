@@ -1,72 +1,58 @@
 "use client"
 
+import React from "react"
 import { Button } from "@/components/ui/button"
 import { ChevronDown } from "lucide-react"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 export function HeroSection() {
-  const scrollToNext = () => {
-    const element = document.getElementById("sobre")
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
+  const { scrollY } = useScroll()
+  const y1 = useTransform(scrollY, [0, 600], [0, -40])
+  const y2 = useTransform(scrollY, [0, 600], [0, -80])
 
   return (
     <section className="relative min-h-screen flex items-center justify-center grid-pattern overflow-hidden">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-        <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
-      </div>
+      {/* Parallax lines */}
+      <motion.div style={{ y: y2 }} className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+        <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+        <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+      </motion.div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="space-y-8 animate-fade-in-up">
-          <h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.22, 0.8, 0.12, 1] }}
+          className="space-y-8"
+        >
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none" style={{ fontFamily: "var(--font-heading)" }}>
             TECH START
             <br />
             <span className="text-primary">SUMMIT</span>
           </h1>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-muted-foreground max-w-3xl mx-auto text-balance">
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.08, duration: 0.6 }}
+            className="text-xl sm:text-2xl md:text-3xl font-light text-muted-foreground max-w-3xl mx-auto text-balance"
+          >
             A Jornada da Inovação e da Carreira de Tecnologia
-          </h2>
+          </motion.h2>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm sm:text-base font-medium pt-4">
-            <span className="flex items-center gap-2">
-              <div className="w-1 h-1 rounded-full bg-primary"></div>
-              30 e 31 DE MAIO, 2025
-            </span>
-            <span className="hidden sm:block text-muted-foreground">|</span>
-            <span className="flex items-center gap-2">
-              <div className="w-1 h-1 rounded-full bg-primary"></div>
-              CURITIBA, PR
-            </span>
-          </div>
-
-          <div className="pt-8">
-            <Button
-              size="lg"
-              onClick={() => {
-                const element = document.getElementById("inscricao")
-                if (element) element.scrollIntoView({ behavior: "smooth" })
-              }}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto group"
-            >
-              Garanta Sua Vaga Agora
-              <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
-            </Button>
-          </div>
-        </div>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.16 }}>
+            <div className="pt-8">
+              <Button size="lg" onClick={() => document.getElementById("inscricao")?.scrollIntoView({ behavior: "smooth" })} className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto group">
+                Garanta Sua Vaga Agora
+                <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
+              </Button>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
 
-      <button
-        onClick={scrollToNext}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-primary hover:text-primary/80 transition-colors"
-        aria-label="Scroll para próxima seção"
-      >
+      <button onClick={() => document.getElementById("sobre")?.scrollIntoView({ behavior: "smooth" })} className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-primary hover:text-primary/80 transition-colors" aria-label="Scroll para próxima seção">
         <ChevronDown size={32} />
       </button>
     </section>

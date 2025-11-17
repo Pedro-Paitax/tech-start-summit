@@ -1,73 +1,112 @@
-import { Target, Compass, Network } from "lucide-react"
+"use client"
 
+import React from "react"
+import { motion } from "framer-motion"
+import { Briefcase, Users, Rocket, Brain, Lightbulb, TrendingUp } from "lucide-react"
 
-const pillars = [
-  {
-    icon: Target,
-    title: "Diagnóstico Prático",
-    description: "Palestras focadas no gap entre mercado e academia, mostrando a realidade da indústria tech.",
+const fadeInUp = {
+  initial: { opacity: 0, y: 18 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.55, ease: [0.22, 0.8, 0.12, 1] },
+}
+
+const staggerContainer = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
   },
-  {
-    icon: Compass,
-    title: "Qualificação Dirigida",
-    description: "Roteiro prático do que estudar para se destacar no mercado de tecnologia.",
-  },
-  {
-    icon: Network,
-    title: "Networking Qualificado",
-    description: "Conexão direta com líderes de RH e profissionais experientes que já trilharam o caminho que você está começando.", // <-- MUDANÇA DE DESCRIÇÃO
-  },
-]
+}
 
 export function AboutSection() {
+  const pilares = [
+    {
+      icon: Rocket,
+      title: "Inovação Tecnológica",
+      description:
+        "Discussões sobre IA, automação, computação em nuvem e as habilidades mais importantes para o profissional do futuro.",
+    },
+    {
+      icon: Briefcase,
+      title: "Mercado de Trabalho",
+      description:
+        "Como entrar, crescer e se destacar em tecnologia mesmo começando do zero ou migrando de outra área.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Tendências e Oportunidades",
+      description:
+        "Análises reais sobre as áreas que mais crescem e onde estão as melhores oportunidades para 2025 e além.",
+    },
+    {
+      icon: Users,
+      title: "Networking Estratégico",
+      description:
+        "Ambiente para fazer conexões reais com recrutadores, líderes de tecnologia, profissionais e outras pessoas da área.",
+    },
+    {
+      icon: Brain,
+      title: "Desenvolvimento Profissional",
+      description:
+        "Talks e insights sobre soft skills, mentalidade de carreira e como acelerar seu crescimento profissional.",
+    },
+    {
+      icon: Lightbulb,
+      title: "Criatividade e Soluções",
+      description:
+        "Atividades para estimular a criação de ideias, projetos e soluções dentro do ambiente tecnológico.",
+    },
+  ]
+
   return (
-    <section id="sobre" className="py-24 sm:py-32 relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center space-y-12">
-          <div className="space-y-6">
-            <div className="inline-block">
-              <span className="text-sm font-semibold text-primary uppercase tracking-wider">Sobre o Summit</span>
-              <div className="h-px w-full bg-primary/30 mt-2"></div>
-            </div>
+    <section id="sobre" className="py-24 px-6 container mx-auto max-w-6xl">
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center max-w-3xl mx-auto mb-16"
+      >
+        <h2 className="text-4xl font-extrabold">O que você vai encontrar</h2>
+        <p className="text-muted-foreground mt-4 text-lg">
+          O Tech Start Summit foi projetado para acelerar sua visão sobre o mercado de tecnologia e impulsionar sua carreira.
+        </p>
+      </motion.div>
 
-            <h2
-              className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-balance"
-              style={{ fontFamily: "var(--font-heading)" }}
+      <motion.div
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="grid md:grid-cols-3 gap-8"
+      >
+        {pilares.map((pilar, idx) => {
+          const Icon = pilar.icon
+
+          return (
+            <motion.div
+              key={idx}
+              variants={fadeInUp}
+              whileHover={{ scale: 1.03 }}
+              className="group bg-card border border-border rounded-xl p-8 shadow-sm hover:border-primary/50 transition-all duration-300"
             >
-              O Ponto de Virada para o Talento de TI
-            </h2>
-
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto text-pretty">
-              O Tech Start Summit nasceu para resolver as maiores dúvidas do estudante de tecnologia:
-              <span className="text-primary font-semibold"> 'Pra qual área eu vou?' ou 'Oque essa área faz?'</span>. A faculdade nos dá a teoria, mas o mercado exige um
-              <span className="text-foreground font-semibold"> direcionamento prático</span> que não está na grade. O Summit é a plataforma que conecta o calouro ao profissional experiente, transformando a desorientação em um mapa de carreira claro.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 pt-12">
-            {pillars.map((pillar, index) => {
-              const Icon = pillar.icon
-              return (
-                <div
-                  key={index}
-                  className="group relative bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300"
-                >
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div className="bg-primary p-4 rounded-full group-hover:scale-110 transition-transform">
-                      <Icon className="w-6 h-6 text-primary-foreground" />
-                    </div>
-                  </div>
-
-                  <div className="pt-8 space-y-4 text-center">
-                    <h3 className="text-xl font-bold">{pillar.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed text-sm">{pillar.description}</p>
-                  </div>
+              <div className="mb-6 flex justify-center">
+                <div className="p-4 bg-primary/10 rounded-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                  <Icon size={28} />
                 </div>
-              )
-            })}
-          </div>
-        </div>
-      </div>
+              </div>
+
+              <h3 className="text-xl font-semibold text-center mb-3">
+                {pilar.title}
+              </h3>
+
+              <p className="text-muted-foreground text-center leading-relaxed">
+                {pilar.description}
+              </p>
+            </motion.div>
+          )
+        })}
+      </motion.div>
     </section>
   )
 }

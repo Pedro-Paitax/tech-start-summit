@@ -1,0 +1,160 @@
+{
+  "items": [
+    {
+      "id": "abertura-welcome-coffee-0900",
+      "time": "09:00",
+      "title": "Abertura e Welcome Coffee",
+      "speakers": ["Tech Start Summit"],
+      "track": "Auditório Principal",
+      "type": "opening",
+      "category": "abertura",
+      "color": "purple",
+      "description": "Boas-vindas ao Tech Start Summit e coffee networking inicial.",
+      "bigDescription": "Abertura oficial do Tech Start Summit com um momento dedicado para networking inicial..."
+    },
+    {
+      "id": "estado-da-tecnologia-no-brasil-0930",
+      "time": "09:30",
+      "title": "O Estado da Tecnologia no Brasil",
+      "speakers": ["Maria Silva"],
+      "track": "Auditório Principal",
+      "type": "keynote",
+      "category": "tecnologia",
+      "color": "purple",
+      "description": "Panorama do ecossistema de tecnologia no Brasil.",
+      "bigDescription": "Uma análise profunda sobre o ecossistema brasileiro..."
+    },
+    {
+      "id": "big-data-na-pratica-0930",
+      "time": "09:30",
+      "title": "Choque de Realidade: Big Data na Prática",
+      "speakers": ["Cristiano Costa"],
+      "track": "Sala Tech A",
+      "type": "talk",
+      "category": "big-data",
+      "color": "blue",
+      "description": "Casos reais de Big Data aplicados.",
+      "bigDescription": "Uma palestra prática mostrando como empresas aplicam Big Data em estratégias reais..."
+    },
+    {
+      "id": "carreira-devops-1030",
+      "time": "10:30",
+      "title": "Do Campus ao Cloud: Carreira em DevOps",
+      "speakers": ["Ana Rodrigues"],
+      "track": "Sala Tech A",
+      "type": "talk",
+      "category": "devops",
+      "color": "orange",
+      "description": "Guia prático para iniciação e crescimento na área.",
+      "bigDescription": "Uma visão completa sobre princípios, caminhos de carreira e ferramentas essenciais..."
+    },
+    {
+      "id": "ia-generativa-alem-do-hype-1030",
+      "time": "10:30",
+      "title": "IA Generativa: Além do Hype",
+      "speakers": ["Dr. Roberto Santos"],
+      "track": "Auditório Principal",
+      "type": "talk",
+      "category": "ai",
+      "color": "green",
+      "description": "Aplicações reais de IA generativa.",
+      "bigDescription": "Demonstrando como IA generativa está sendo aplicada em soluções inovadoras..."
+    },
+    {
+      "id": "coffee-break-1130",
+      "time": "11:30",
+      "title": "Coffee Break",
+      "speakers": [],
+      "track": "Área de Networking",
+      "type": "break",
+      "category": "pause",
+      "color": "gray",
+      "description": "Pausa para café e networking.",
+      "bigDescription": "Momento ideal para conversar com outros participantes e palestrantes."
+    },
+    {
+      "id": "almoco-networking-1200",
+      "time": "12:00",
+      "title": "Almoço e Networking",
+      "speakers": [],
+      "track": "Área de Networking",
+      "type": "break",
+      "category": "lunch",
+      "color": "gray",
+      "description": "Almoço coletivo.",
+      "bigDescription": "Almoço com espaço dedicado para conversas e conexões."
+    },
+    {
+      "id": "seguranca-cibernetica-1330",
+      "time": "13:30",
+      "title": "Segurança Cibernética: Protegendo o Futuro",
+      "speakers": ["Paula Mendes"],
+      "track": "Sala Tech B",
+      "type": "talk",
+      "category": "cybersecurity",
+      "color": "red",
+      "description": "Pilares modernos de segurança digital.",
+      "bigDescription": "Conheça práticas de ponta e frameworks utilizados por empresas globais..."
+    },
+    {
+      "id": "startups-zero-ao-unicornio-1330",
+      "time": "13:30",
+      "title": "Startups: Do Zero ao Unicórnio",
+      "speakers": ["João Martins"],
+      "track": "Auditório Principal",
+      "type": "talk",
+      "category": "startups",
+      "color": "purple",
+      "description": "A jornada completa de uma startup.",
+      "bigDescription": "Um mergulho nas etapas que transformam startups em empresas bilionárias..."
+    },
+    {
+      "id": "cloud-computing-escalabilidade-1430",
+      "time": "14:30",
+      "title": "Cloud Computing e Escalabilidade",
+      "speakers": ["Fernanda Lima"],
+      "track": "Sala Tech A",
+      "type": "talk",
+      "category": "cloud",
+      "color": "blue",
+      "description": "Arquitetura cloud escalável.",
+      "bigDescription": "Entenda o papel de containers, Kubernetes e serverless..."
+    },
+    {
+      "id": "mobile-first-1430",
+      "time": "14:30",
+      "title": "Mobile First: Desenvolvimento para o Futuro",
+      "speakers": ["Carlos Pereira"],
+      "track": "Sala Tech B",
+      "type": "workshop",
+      "category": "mobile",
+      "color": "orange",
+      "description": "Workshop prático sobre mobile.",
+      "bigDescription": "Desenvolva apps focados em performance, UX e eficiência..."
+    },
+    {
+      "id": "coffee-break-1530",
+      "time": "15:30",
+      "title": "Coffee Break e Networking",
+      "speakers": [],
+      "track": "Área de Networking",
+      "type": "break",
+      "category": "pause",
+      "color": "gray",
+      "description": "Pausa com networking.",
+      "bigDescription": "Última pausa antes do painel de líderes."
+    },
+    {
+      "id": "painel-lideres-tech-1600",
+      "time": "16:00",
+      "title": "Painel: Líderes Tech do Paraná",
+      "speakers": ["Painel com múltiplos convidados"],
+      "track": "Auditório Principal",
+      "type": "panel",
+      "category": "leadership",
+      "color": "purple",
+      "description": "Debate com líderes do mercado local.",
+      "bigDescription": "Líderes de grandes empresas do Paraná compartilham experiências..."
+    }
+  ]
+}
