@@ -22,40 +22,66 @@ export function SpeakersSection() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {palestrantes.map(p => (
-            <div
-              key={p.nome}
-              className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300"
-            >
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={p.foto || "/placeholder.svg"}
-                  alt={p.nome}
-                  className="w-full h-full object-cover group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-                />
-              </div>
+          {palestrantes.map((p) => {
+            const openLinkedin = (url?: string) => {
+              if (!url) return;
+              window.open(url, "_blank", "noopener,noreferrer");
+            };
 
-              <div className="p-6 space-y-2">
-                <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{p.nome}</h3>
-                <p className="text-sm font-semibold text-primary">{p.profissão}</p>
-                <p className="text-sm text-muted-foreground">{p.entidade}</p>
-                <p className="text-sm text-muted-foreground pt-2 leading-relaxed">{p.bio}</p>
-              </div>
+            return (
+              <div
+                key={p.nome}
+                role={p.lkdn ? "button" : undefined}
+                tabIndex={p.lkdn ? 0 : undefined}
+                onKeyDown={(e) => {
+                  if (!p.lkdn) return;
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    openLinkedin(p.lkdn);
+                  }
+                }}
+                onClick={(e) => {
+                  if (!p.lkdn || e.defaultPrevented) return;
+                  openLinkedin(p.lkdn);
+                }}
+                className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 cursor-pointer"
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={p.foto || "/placeholder.svg"}
+                    alt={p.nome}
+                    className="w-full h-full object-cover group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                  />
+                </div>
 
-              {/* Hover overlay with LinkedIn */}
-              <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <a
-                  href={p.lkdn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-primary-foreground font-semibold hover:scale-110 transition-transform"
+                <div className="p-6 space-y-2">
+                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{p.nome}</h3>
+                  <p className="text-sm font-semibold text-primary">{p.profissão}</p>
+                  <p className="text-sm text-muted-foreground">{p.entidade}</p>
+                  <p className="text-sm text-muted-foreground pt-2 leading-relaxed">{p.bio}</p>
+                </div>
+
+                <div
+                  className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none group-hover:pointer-events-auto"
                 >
-                  <Linkedin size={24} />
-                  <span>Ver Perfil</span>
-                </a>
+                  <a
+                    href={p.lkdn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      e.stopPropagation()
+                      window.open(p.lkdn, "_blank", "noopener,noreferrer")
+                    }}
+                    className="flex items-center gap-2 text-primary-foreground font-semibold hover:scale-110 transition-transform"
+                  >
+                    <Linkedin size={24} />
+                    <span>Ver Perfil</span>
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

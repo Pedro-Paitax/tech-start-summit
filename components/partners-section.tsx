@@ -1,13 +1,10 @@
-const partners = [
-  { name: "UTFPR", logo: "/utfpr-logo.jpg" },
-  { name: "PUCPR", logo: "/pucpr-logo.jpg" },
-  { name: "UFPR", logo: "/ufpr-logo.jpg" },
-  { name: "UP", logo: "/up-university-logo.jpg" },
-  { name: "FAE", logo: "/fae-university-logo.jpg" },
-  { name: "Uninter", logo: "/uninter-logo.jpg" },
-]
+"use client"
+
+import entidades from "@/data/entidades.json"
 
 export function PartnersSection() {
+  const partners = entidades.entities.filter(e => e.type === "partner")
+
   return (
     <section id="parceiros" className="py-24 sm:py-32 bg-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,8 +23,7 @@ export function PartnersSection() {
             </h2>
 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Atléticas, Centros Acadêmicos e universidades unidos pela missão de fortalecer o ecossistema tech do
-              Paraná.
+              Atléticas, Centros Acadêmicos e universidades unidos pela missão de fortalecer o ecossistema tech do Paraná.
             </p>
           </div>
 

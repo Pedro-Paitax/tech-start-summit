@@ -13,7 +13,6 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center grid-pattern overflow-hidden">
-      {/* Decorative lines */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
         <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>

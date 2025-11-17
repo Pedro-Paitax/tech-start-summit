@@ -1,20 +1,12 @@
+"use client"
+
+import entidades from "@/data/entidades.json"
 import { Button } from "@/components/ui/button"
 
-const institutionalSupport = [
-  { name: "Secretaria de Inovação PR", logo: "/government-innovation-logo.jpg" },
-  { name: "SENAI PR", logo: "/senai-logo.jpg" },
-  { name: "SEBRAE PR", logo: "/sebrae-logo.jpg" },
-]
-
-const sponsors = [
-  { name: "TechCorp", logo: "/tech-company-logo.jpg", tier: "gold" },
-  { name: "DataFlow", logo: "/data-company-logo.png", tier: "gold" },
-  { name: "CloudSync", logo: "/cloud-company-logo.png", tier: "silver" },
-  { name: "DevTools", logo: "/developer-tools-logo.png", tier: "silver" },
-  { name: "SecureNet", logo: "/security-company-logo.png", tier: "silver" },
-]
-
 export function SponsorsSection() {
+  const institutionalSupport = entidades.entities.filter(e => e.type === "institutional")
+  const sponsors = entidades.entities.filter(e => e.type === "sponsor")
+
   return (
     <section id="patrocinadores" className="py-24 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,7 +25,6 @@ export function SponsorsSection() {
             </h2>
           </div>
 
-          {/* Apoio Institucional */}
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-center">Apoio Institucional</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -52,16 +43,16 @@ export function SponsorsSection() {
             </div>
           </div>
 
-          {/* Patrocinadores */}
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-center">Patrocinadores</h3>
+
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {sponsors.map((sponsor, index) => (
                 <div
                   key={index}
-                  className={`bg-card border rounded-lg p-6 flex items-center justify-center hover:border-primary/50 transition-all duration-300 ${
-                    sponsor.tier === "gold" ? "border-primary/50 md:col-span-1" : "border-border"
-                  }`}
+                  className={`bg-card border rounded-lg p-6 flex items-center justify-center transition-all duration-300 hover:border-primary/50
+                    ${sponsor.tier === "gold" ? "border-primary/50" : "border-border"}
+                  `}
                 >
                   <img
                     src={sponsor.logo || "/placeholder.svg"}
@@ -73,7 +64,6 @@ export function SponsorsSection() {
             </div>
           </div>
 
-          {/* CTA para patrocinadores */}
           <div className="text-center pt-8">
             <p className="text-muted-foreground mb-6">Quer apoiar o maior evento de tech do Paraná?</p>
             <Button
