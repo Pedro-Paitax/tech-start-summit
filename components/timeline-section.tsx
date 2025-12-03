@@ -28,7 +28,6 @@ const iconMap: Record<string, any> = {
 
 const days: ProgramDay[] = [day1, day2];
 
-// Convert time "09:30" → 930 for sorting
 function timeToNumber(t: string) {
     return parseInt(t.replace(":", ""), 10);
 }
@@ -37,7 +36,7 @@ export default function ProgramTimeline() {
     const [selected, setSelected] = useState<ProgramTalk | null>(null);
 
     return (
-        <section id="program" className="py-24 px-4 md:px-8 bg-black text-white">
+        <section id="programacao" className="py-24 px-4 md:px-8 bg-black text-white">
             <div className="max-w-4xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -73,12 +72,10 @@ export default function ProgramTimeline() {
                                             className="mb-12 ml-6 relative cursor-pointer"
                                             onClick={() => setSelected(item)}
                                         >
-                                            {/* Icon */}
                                             <span className="absolute -left-[38px] top-1 flex items-center justify-center w-8 h-8 rounded-full bg-purple-600/30 border border-purple-400 backdrop-blur-sm">
                                                 <Icon className="w-4 h-4 text-purple-300" />
                                             </span>
 
-                                            {/* Card */}
                                             <div className="p-5 bg-zinc-900/80 rounded-2xl border border-white/10 backdrop-blur-md shadow-lg hover:bg-zinc-800/80 transition">
                                                 <div className="flex items-center justify-between mb-2">
                                                     <span className="text-purple-400 font-semibold">
@@ -114,7 +111,6 @@ export default function ProgramTimeline() {
                 ))}
             </div>
 
-            {/* MODAL */}
             <AnimatePresence>
                 {selected && (
                     <Dialog open={true} onOpenChange={() => setSelected(null)}>
@@ -146,7 +142,7 @@ export default function ProgramTimeline() {
 
                                 {selected.track && (
                                     <p className="text-xs mt-1 opacity-70">
-                                        🎯 Trilha: {selected.track}
+                                        🎯 Local: {selected.track}
                                     </p>
                                 )}
                             </DialogHeader>

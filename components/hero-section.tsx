@@ -26,6 +26,14 @@ export function HeroSection() {
           transition={{ duration: 0.7, ease: [0.22, 0.8, 0.12, 1] }}
           className="space-y-8"
         >
+          <a href="/">
+            <img
+              src="https://2l1c0a72tw.ufs.sh/f/yEUlE6cUsfMPfdCMoSEbqMCsSxr5ViANnkGWDP7oYH2XmuIE"
+              alt="Tech Start Summit"
+              className="mx-auto h-32 w-auto mb-6"
+            />
+          </a>
+
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none" style={{ fontFamily: "var(--font-heading)" }}>
             TECH START
             <br />

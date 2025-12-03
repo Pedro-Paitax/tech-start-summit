@@ -8,7 +8,6 @@
       "track": "Auditório Principal",
       "type": "opening",
       "category": "abertura",
-      "color": "purple",
       "description": "Boas-vindas ao Tech Start Summit e coffee networking inicial.",
       "bigDescription": "Abertura oficial do Tech Start Summit com um momento dedicado para networking inicial..."
     },
@@ -20,7 +19,6 @@
       "track": "Auditório Principal",
       "type": "keynote",
       "category": "tecnologia",
-      "color": "purple",
       "description": "Panorama do ecossistema de tecnologia no Brasil.",
       "bigDescription": "Uma análise profunda sobre o ecossistema brasileiro..."
     },
@@ -32,7 +30,6 @@
       "track": "Sala Tech A",
       "type": "talk",
       "category": "big-data",
-      "color": "blue",
       "description": "Casos reais de Big Data aplicados.",
       "bigDescription": "Uma palestra prática mostrando como empresas aplicam Big Data em estratégias reais..."
     },
@@ -44,7 +41,6 @@
       "track": "Sala Tech A",
       "type": "talk",
       "category": "devops",
-      "color": "orange",
       "description": "Guia prático para iniciação e crescimento na área.",
       "bigDescription": "Uma visão completa sobre princípios, caminhos de carreira e ferramentas essenciais..."
     },
@@ -56,7 +52,6 @@
       "track": "Auditório Principal",
       "type": "talk",
       "category": "ai",
-      "color": "green",
       "description": "Aplicações reais de IA generativa.",
       "bigDescription": "Demonstrando como IA generativa está sendo aplicada em soluções inovadoras..."
     },
@@ -68,7 +63,6 @@
       "track": "Área de Networking",
       "type": "break",
       "category": "pause",
-      "color": "gray",
       "description": "Pausa para café e networking.",
       "bigDescription": "Momento ideal para conversar com outros participantes e palestrantes."
     },
@@ -80,7 +74,6 @@
       "track": "Área de Networking",
       "type": "break",
       "category": "lunch",
-      "color": "gray",
       "description": "Almoço coletivo.",
       "bigDescription": "Almoço com espaço dedicado para conversas e conexões."
     },
@@ -92,7 +85,6 @@
       "track": "Sala Tech B",
       "type": "talk",
       "category": "cybersecurity",
-      "color": "red",
       "description": "Pilares modernos de segurança digital.",
       "bigDescription": "Conheça práticas de ponta e frameworks utilizados por empresas globais..."
     },
@@ -104,7 +96,6 @@
       "track": "Auditório Principal",
       "type": "talk",
       "category": "startups",
-      "color": "purple",
       "description": "A jornada completa de uma startup.",
       "bigDescription": "Um mergulho nas etapas que transformam startups em empresas bilionárias..."
     },
@@ -116,7 +107,6 @@
       "track": "Sala Tech A",
       "type": "talk",
       "category": "cloud",
-      "color": "blue",
       "description": "Arquitetura cloud escalável.",
       "bigDescription": "Entenda o papel de containers, Kubernetes e serverless..."
     },
@@ -128,7 +118,6 @@
       "track": "Sala Tech B",
       "type": "workshop",
       "category": "mobile",
-      "color": "orange",
       "description": "Workshop prático sobre mobile.",
       "bigDescription": "Desenvolva apps focados em performance, UX e eficiência..."
     },
@@ -140,11 +129,10 @@
       "track": "Área de Networking",
       "type": "break",
       "category": "pause",
-      "color": "gray",
       "description": "Pausa com networking.",
       "bigDescription": "Última pausa antes do painel de líderes."
     },
-    {
+    { 
       "id": "painel-lideres-tech-1600",
       "time": "16:00",
       "title": "Painel: Líderes Tech do Paraná",
@@ -152,7 +140,17 @@
       "track": "Auditório Principal",
       "type": "panel",
       "category": "leadership",
-      "color": "purple",
+      "description": "Debate com líderes do mercado local.",
+      "bigDescription": "Líderes de grandes empresas do Paraná compartilham experiências..."
+    },
+        {
+      "id": "programateste",
+      "time": "18:00",
+      "title": "Painel: Líderes Tech do Paraná",
+      "speakers": ["Painel com múltiplos convidados"],
+      "track": "Auditório Principal",
+      "type": "panel",
+      "category": "leadership",
       "description": "Debate com líderes do mercado local.",
       "bigDescription": "Líderes de grandes empresas do Paraná compartilham experiências..."
     }

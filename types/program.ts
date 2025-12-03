@@ -12,7 +12,5 @@ export type ProgramTalk = {
 };
 
 export type ProgramDay = {
-  day: number;
-  date: string;
   items: ProgramTalk[];
 };
