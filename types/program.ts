@@ -21,4 +21,3 @@ export type AcademicPartner = {
   visible: boolean;
   category: "centro_academico" | "entidade" | "atletica" | "equipe";
 };
-

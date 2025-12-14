@@ -9,7 +9,20 @@ const fadeInUp = {
   transition: { duration: 0.6, ease: [0.25, 0.8, 0.25, 1] },
 }
 
-export function SpeakersGrid({ palestrantes }) {
+type Speaker = {
+  nome: string;
+  foto?: string;
+  lkdn?: string;
+  profissão: string;
+  entidade: string;
+  bio: string;
+};
+
+type SpeakersGridProps = {
+  palestrantes: Speaker[];
+};
+
+export function SpeakersGrid({ palestrantes }: SpeakersGridProps) {
   return (
     <section id="palestrantes" className="py-24 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

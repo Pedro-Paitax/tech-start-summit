@@ -31,7 +31,7 @@ export async function getProgramacao() {
           p["Palestrante"]?.relation?.map((r: any) => r.id) || [];
 
         const speakersData = await Promise.all(
-          speakerIds.map(async (id) => {
+          speakerIds.map(async (id: string) => {
             try {
               return await getSpeakerById(id);
             } catch {
