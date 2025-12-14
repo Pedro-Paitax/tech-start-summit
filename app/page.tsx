@@ -1,9 +1,9 @@
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
-import { SpeakersSection } from "@/components/speakers-section"
-import { PartnersSection } from "@/components/partners-section"
-import { SponsorsSection } from "@/components/sponsors-section"
+import  SpeakersSection  from "@/components/speakers/SpeakersSection"
+import { PartnersSection } from "@/components/partners/PartnersSection"
+import { SponsorsSection } from "@/components/sponsors/SponsorsSection"
 import { FooterCTA } from "@/components/footer-cta"
 import  ProgramTimeline from "@/components/timeline-section"
 

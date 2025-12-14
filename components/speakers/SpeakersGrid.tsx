@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { Linkedin } from "lucide-react"
-import palestrantes from "@/data/palestrantes.json"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -10,7 +9,7 @@ const fadeInUp = {
   transition: { duration: 0.6, ease: [0.25, 0.8, 0.25, 1] },
 }
 
-export function SpeakersSection() {
+export function SpeakersGrid({ palestrantes }) {
   return (
     <section id="palestrantes" className="py-24 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,7 +30,6 @@ export function SpeakersSection() {
 
           <h2
             className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight"
-            style={{ fontFamily: "var(--font-heading)" }}
           >
             Os Líderes que Vão <span className="text-primary">Guiar</span> a Jornada
           </h2>
@@ -49,6 +47,7 @@ export function SpeakersSection() {
               className="group relative bg-card border border-border rounded-lg overflow-hidden
                           hover:border-primary/50 transition-all duration-300"
             >
+              
               <div className="aspect-square overflow-hidden relative">
                 <img
                   src={p.foto || "/placeholder.svg"}
@@ -56,19 +55,21 @@ export function SpeakersSection() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                 />
 
-                <a
-                  href={p.lkdn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100
-                           transition-opacity duration-300 flex items-center justify-center
-                           sm:pointer-events-auto pointer-events-none sm:group-hover:pointer-events-auto"
-                >
-                  <span className="flex items-center gap-2 text-primary-foreground font-semibold">
-                    <Linkedin size={24} />
-                    Ver Perfil
-                  </span>
-                </a>
+                {p.lkdn && (
+                  <a
+                    href={p.lkdn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100
+                             transition-opacity duration-300 flex items-center justify-center
+                             pointer-events-none group-hover:pointer-events-auto"
+                  >
+                    <span className="flex items-center gap-2 text-primary-foreground font-semibold">
+                      <Linkedin size={24} />
+                      Ver Perfil
+                    </span>
+                  </a>
+                )}
               </div>
 
               <div className="p-6 space-y-2">
@@ -80,12 +81,6 @@ export function SpeakersSection() {
                 <p className="text-sm text-muted-foreground pt-2 leading-relaxed">{p.bio}</p>
               </div>
 
-              <a
-                href={p.lkdn}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute inset-0 sm:hidden"
-              />
             </motion.div>
           ))}
         </div>

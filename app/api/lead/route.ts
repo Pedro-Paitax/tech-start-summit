@@ -1,13 +1,8 @@
 import { NextResponse } from "next/server";
-import { Client } from "@notionhq/client";
-
-const notion = new Client({
-  auth: process.env.NOTION_API_KEY,
-});
+import { saveLead } from "@/lib/lead";
 
 export async function POST(req: Request) {
   try {
-
     const ip =
       req.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
       req.headers.get("x-real-ip") ||
@@ -22,24 +17,9 @@ export async function POST(req: Request) {
       );
     }
 
-    const res = await notion.pages.create({
-      parent: {
-        database_id: process.env.NOTION_DATABASE_ID!,
-      },
-      properties: {
-        Email: {
-          email,
-        },
-        "Origem do Lead": {
-          select: { name: origem || "site" },
-        },
-        IP: {
-          rich_text: [{ text: { content: ip } }],
-        },
-      },
-    });
+    const result = await saveLead({ email, origem, ip });
 
-    return NextResponse.json({ ok: true, data: res });
+    return NextResponse.json({ ok: true, data: result });
   } catch (error: any) {
     console.error("Erro ao salvar lead no Notion:", error);
     return NextResponse.json(

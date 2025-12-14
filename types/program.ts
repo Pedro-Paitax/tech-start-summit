@@ -1,4 +1,3 @@
-// types/program.ts
 
 export type ProgramTalk = {
   id: string;
@@ -7,10 +6,19 @@ export type ProgramTalk = {
   title: string;
   speakers?: string[];
   track?: string;
-  description?: string;       // resumo curto
-  bigDescription?: string;    // descrição longa
+  description?: string;       
+  bigDescription?: string;    
 };
 
 export type ProgramDay = {
   items: ProgramTalk[];
 };
+
+export type AcademicPartner = {
+  id: string;
+  nome: string;
+  logo: string;
+  visible: boolean;
+  category: "centro_academico" | "entidade" | "atletica" | "equipe";
+};
+

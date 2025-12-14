@@ -91,21 +91,24 @@ export function FooterCTA() {
               <p className="text-sm text-muted-foreground mb-4">Siga-nos nas redes sociais</p>
               <div className="flex items-center justify-center gap-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/techstartsummit"
+                  target="_blank"
                   className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all"
                   aria-label="Instagram"
                 >
                   <Instagram size={20} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/tech-start-summit"
+                  target="_blank"
                   className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="#"
+                  href="mailto:equipe@techstartsummit.com.br"
+                  target="_blank"
                   className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-all"
                   aria-label="Email"
                 >
