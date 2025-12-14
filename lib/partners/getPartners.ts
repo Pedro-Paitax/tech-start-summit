@@ -1,4 +1,3 @@
-// lib/partners/getPartners.ts
 import { getAcademicCenter } from "./academicCenters";
 import { getAtletics } from "./atletics";
 import { getEntity } from "./entitys";
