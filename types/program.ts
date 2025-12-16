@@ -13,11 +13,3 @@ export type ProgramTalk = {
 export type ProgramDay = {
   items: ProgramTalk[];
 };
-
-export type AcademicPartner = {
-  id: string;
-  nome: string;
-  logo: string;
-  visible: boolean;
-  category: "centro_academico" | "entidade" | "atletica" | "equipe";
-};

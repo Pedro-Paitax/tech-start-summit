@@ -34,7 +34,10 @@ export function HeroSection() {
             />
           </a>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none" style={{ fontFamily: "var(--font-heading)" }}>
+          <h1
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
             TECH START
             <br />
             <span className="text-primary">SUMMIT</span>
@@ -49,18 +52,55 @@ export function HeroSection() {
             A Jornada da Inovação e da Carreira de Tecnologia
           </motion.h2>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.16 }}>
+          {/* SAVE THE DATE */}
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.14, duration: 0.5 }}
+            className="flex justify-center"
+          >
+            <div className="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-primary/10 px-6 py-2 text-primary font-semibold tracking-wide">
+              <span className="uppercase text-sm">Save the Date</span>
+              <span className="text-sm sm:text-base">
+                30 e 31 de Maio
+              </span>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.22 }}
+          >
             <div className="pt-8">
-              <Button size="lg" onClick={() => document.getElementById("inscricao")?.scrollIntoView({ behavior: "smooth" })} className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto group">
+              <Button
+                size="lg"
+                onClick={() =>
+                  document
+                    .getElementById("inscricao")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto group"
+              >
                 Garanta Sua Vaga Agora
-                <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
+                <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">
+                  →
+                </span>
               </Button>
             </div>
           </motion.div>
         </motion.div>
       </div>
 
-      <button onClick={() => document.getElementById("sobre")?.scrollIntoView({ behavior: "smooth" })} className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-primary hover:text-primary/80 transition-colors" aria-label="Scroll para próxima seção">
+      <button
+        onClick={() =>
+          document
+            .getElementById("sobre")
+            ?.scrollIntoView({ behavior: "smooth" })
+        }
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-primary hover:text-primary/80 transition-colors"
+        aria-label="Scroll para próxima seção"
+      >
         <ChevronDown size={32} />
       </button>
     </section>

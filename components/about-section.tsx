@@ -36,7 +36,7 @@ export function AboutSection() {
       icon: TrendingUp,
       title: "Tendências e Oportunidades",
       description:
-        "Análises reais sobre as áreas que mais crescem e onde estão as melhores oportunidades para 2025 e além.",
+        "Análises reais sobre as áreas que mais crescem e onde estão as melhores oportunidades para 2026 e além.",
     },
     {
       icon: Users,

@@ -1,11 +1,11 @@
-// components/partners/PartnersSection.tsx
-import { getPartners } from "@/lib/partners/getPartners";
+import { getPartners } from "@/lib/entitys/getPartners";
 import { PartnersGrid } from "./PartnerGrid";
 
 export const revalidate = 3600;
 
 export async function PartnersSection() {
   const partners = await getPartners();
+  console.log(partners)
   return (
     <section id="parceiros" className="py-24 sm:py-32 bg-secondary/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
