@@ -29,14 +29,21 @@ export async function getPartners(): Promise<PartnerType[]> {
   );
 }
 
+const levelPriority: Record<string, number> = {
+  Gold: 1,
+  Silver: 2,
+};
+
 export async function getCompanySponsor(): Promise<CompanySponsorType[]> {
   const entities = await getEntity();
 
-  return (
-    entities.filter((partner) =>
-      Company.includes(partner.type as any)
-    ) as unknown as CompanySponsorType[]
-  );
+  return entities
+    .filter((partner) => Company.includes(partner.type as any)
+    )
+    .sort(
+      (a, b) => (levelPriority[a.level] ?? 99) -
+        (levelPriority[b.level] ?? 99)
+    ) as unknown as CompanySponsorType[];
 }
 
 export async function getInstitutionalSponsor(): Promise<InstitutionalSponsorType[]> {

@@ -13,6 +13,7 @@ export async function getEntity(): Promise<PartnerType[]> {
             checkbox: {
                 equals: true,
             },
+            
         },
     });
 
