@@ -80,7 +80,7 @@ export function HeroSection() {
                     .getElementById("inscricao")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto group"
+                className="cursor-pointer bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto group"
               >
                 Garanta Sua Vaga Agora
                 <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">

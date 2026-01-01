@@ -3,6 +3,7 @@ import {
   getInstitutionalSponsor,
 } from "@/lib/entitys/getPartners";
 import { Button } from "@/components/ui/button";
+import Link from "next/link"
 import { SponsorsGrid } from "./SponsorsGrid";
 
 export const revalidate = 3600;
@@ -32,7 +33,14 @@ export async function SponsorsSection() {
           />
 
           <div className="text-center pt-8">
-            <Button variant="outline">Seja um Patrocinador</Button>
+<Button asChild variant="outline">
+  <Link 
+    href="https://wa.me/5541996462661?text=Ol%C3%A1%20%F0%9F%96%90!%20Quero%20ser%20patrocinador."
+    target="_blank"
+  >
+    Seja um Patrocinador
+  </Link>
+</Button>
           </div>
         </div>
       </div>

@@ -23,43 +23,52 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-sm border-b border-border" : "bg-transparent"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-background/95 backdrop-blur-sm border-b border-border" : "bg-transparent"
+      }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="text-xl sm:text-2xl font-bold tracking-tight">
+          <div className="text-xl sm:text-2xl font-bold tracking-tight select-none">
             TECH <span className="text-primary">START</span> SUMMIT
           </div>
-          <a href="/">
-            <img src="https://2l1c0a72tw.ufs.sh/f/yEUlE6cUsfMPfdCMoSEbqMCsSxr5ViANnkGWDP7oYH2XmuIE" alt="Tech Start Summit" className="h-8 w-8" />
+          
+          <a href="/" className="cursor-pointer">
+            <img 
+              src="https://2l1c0a72tw.ufs.sh/f/yEUlE6cUsfMPfdCMoSEbqMCsSxr5ViANnkGWDP7oYH2XmuIE" 
+              alt="Tech Start Summit" 
+              className="h-8 w-8 cursor-pointer" 
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection("sobre")} className="text-sm hover:text-primary transition-colors">
+            <button 
+              onClick={() => scrollToSection("sobre")} 
+              className="text-sm hover:text-primary transition-colors cursor-pointer"
+            >
               Sobre
             </button>
             <button
               onClick={() => scrollToSection("programacao")}
-              className="text-sm hover:text-primary transition-colors"
+              className="text-sm hover:text-primary transition-colors cursor-pointer"
             >
               Programação
             </button>
             <button
               onClick={() => scrollToSection("palestrantes")}
-              className="text-sm hover:text-primary transition-colors"
+              className="text-sm hover:text-primary transition-colors cursor-pointer"
             >
               Palestrantes
             </button>
             <button
               onClick={() => scrollToSection("parceiros")}
-              className="text-sm hover:text-primary transition-colors"
+              className="text-sm hover:text-primary transition-colors cursor-pointer"
             >
               Parceiros
             </button>
             <button
               onClick={() => scrollToSection("patrocinadores")}
-              className="text-sm hover:text-primary transition-colors"
+              className="text-sm hover:text-primary transition-colors cursor-pointer"
             >
               Patrocinadores
             </button>
@@ -67,7 +76,7 @@ export function Navigation() {
 
           <Button
             onClick={() => scrollToSection("inscricao")}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold cursor-pointer"
           >
             Inscreva-se
           </Button>
