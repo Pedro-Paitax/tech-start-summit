@@ -1,11 +1,10 @@
-import { Navigation } from "@/components/navigation"
-import { HeroSection } from "@/components/hero-section"
-import { AboutSection } from "@/components/about-section"
-import  SpeakersSection  from "@/components/speakers/SpeakersSection"
-import { PartnersSection } from "@/components/partners/PartnersSection"
-import { SponsorsSection } from "@/components/sponsors/SponsorsSection"
-import { FooterCTA } from "@/components/footer-cta"
-import  ProgramTimeline from "@/components/timeline-section"
+import { Navigation } from "@/components/landing/navigation"
+import { HeroSection } from "@/components/landing/hero-section"
+import { AboutSection } from "@/components/landing/about-section"
+import  SpeakersSection  from "@/components/landing/speakers/SpeakersSection"
+import { PartnersSection } from "@/components/landing/partners/PartnersSection"
+import { SponsorsSection } from "@/components/landing/sponsors/SponsorsSection"
+import { FooterCTA } from "@/components/landing/footer-cta"
 
 export default function Page() {
   return (
@@ -13,7 +12,6 @@ export default function Page() {
       <Navigation />
       <HeroSection />
       <AboutSection />
-      <ProgramTimeline />
       <SpeakersSection />
       <PartnersSection />
       <SponsorsSection />
