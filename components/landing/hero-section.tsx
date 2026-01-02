@@ -26,11 +26,17 @@ export function HeroSection() {
           transition={{ duration: 0.7, ease: [0.22, 0.8, 0.12, 1] }}
           className="space-y-8"
         >
-          <a href="/">
-            <img
+          <a href="/" className="inline-block">
+            <motion.img
               src="https://2l1c0a72tw.ufs.sh/f/yEUlE6cUsfMPfdCMoSEbqMCsSxr5ViANnkGWDP7oYH2XmuIE"
               alt="Tech Start Summit"
               className="mx-auto h-32 w-auto mb-6"
+              animate={{ y: [0, -10, 0] }}
+              transition={{
+                duration: 2.4,
+                ease: "easeInOut",
+                repeat: Infinity,
+              }}
             />
           </a>
 
@@ -49,10 +55,9 @@ export function HeroSection() {
             transition={{ delay: 0.08, duration: 0.6 }}
             className="text-xl sm:text-2xl md:text-3xl font-light text-muted-foreground max-w-3xl mx-auto text-balance"
           >
-            A Jornada da Inovação e da Carreira de Tecnologia
+            Seu primeiro passo real na carreira em tecnologia.
           </motion.h2>
 
-          {/* SAVE THE DATE */}
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -67,12 +72,22 @@ export function HeroSection() {
             </div>
           </motion.div>
 
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.18 }}
+            className="text-muted-foreground max-w-2xl mx-auto text-lg"
+          >
+            Um summit feito para calouros, estudantes e pessoas entrando na área. 
+            Feito por pessoas que já estiveram no seu lugar!
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.22 }}
           >
-            <div className="pt-8">
+            <div className="pt-8 flex justify-center">
               <Button
                 size="lg"
                 onClick={() =>
@@ -82,7 +97,7 @@ export function HeroSection() {
                 }
                 className="cursor-pointer bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 py-6 h-auto group"
               >
-                Garanta Sua Vaga Agora
+                Quero dar meu primeiro passo
                 <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">
                   →
                 </span>

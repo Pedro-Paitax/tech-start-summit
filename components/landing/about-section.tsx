@@ -22,39 +22,39 @@ export function AboutSection() {
   const pilares = [
     {
       icon: Rocket,
-      title: "Inovação Tecnológica",
+      title: "Áreas da Tecnologia",
       description:
-        "Discussões sobre IA, automação, computação em nuvem e as habilidades mais importantes para o profissional do futuro.",
+        "Entenda quais áreas existem (dev, dados, produto, IA e mais) e o que cada profissional faz no dia a dia.",
     },
     {
       icon: Briefcase,
-      title: "Mercado de Trabalho",
+      title: "Primeiros Passos na Carreira",
       description:
-        "Como entrar, crescer e se destacar em tecnologia mesmo começando do zero ou migrando de outra área.",
+        "Como entrar no mercado de tecnologia, o que estudar primeiro e como se posicionar mesmo sendo iniciante.",
     },
     {
       icon: TrendingUp,
-      title: "Tendências e Oportunidades",
+      title: "Oportunidades Reais",
       description:
-        "Análises reais sobre as áreas que mais crescem e onde estão as melhores oportunidades para 2026 e além.",
+        "Onde estão as oportunidades para quem está começando e quais caminhos fazem mais sentido hoje.",
     },
     {
       icon: Users,
-      title: "Networking Estratégico",
+      title: "Networking Sem Vergonha",
       description:
-        "Ambiente para fazer conexões reais com recrutadores, líderes de tecnologia, profissionais e outras pessoas da área.",
+        "Aprenda a conversar com profissionais e empresas mesmo sem experiência — de forma guiada.",
     },
     {
       icon: Brain,
-      title: "Desenvolvimento Profissional",
+      title: "Mentalidade de Crescimento",
       description:
-        "Talks e insights sobre soft skills, mentalidade de carreira e como acelerar seu crescimento profissional.",
+        "Soft skills, comunicação e como acelerar seu aprendizado desde o início da carreira.",
     },
     {
       icon: Lightbulb,
-      title: "Criatividade e Soluções",
+      title: "Aprender na Prática",
       description:
-        "Atividades para estimular a criação de ideias, projetos e soluções dentro do ambiente tecnológico.",
+        "Atividades, desafios e experiências pensadas para transformar teoria em ação.",
     },
   ]
 
@@ -67,9 +67,11 @@ export function AboutSection() {
         viewport={{ once: true }}
         className="text-center max-w-3xl mx-auto mb-16"
       >
-        <h2 className="text-4xl font-extrabold">O que você vai encontrar</h2>
+        <h2 className="text-4xl font-extrabold">
+          Esse summit é para quem está começando
+        </h2>
         <p className="text-muted-foreground mt-4 text-lg">
-          O Tech Start Summit foi projetado para acelerar sua visão sobre o mercado de tecnologia e impulsionar sua carreira.
+          Nada de palestras inalcançáveis. Aqui você aprende, entende e sai com direção.
         </p>
       </motion.div>
 

@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Instagram, Linkedin, Mail } from "lucide-react"
 import { useState } from "react"
 import { Toaster, toast } from "sonner"
+import { FaqSection } from "./FaqSection"
 
 export function FooterCTA() {
   const [email, setEmail] = useState("")
@@ -59,8 +60,10 @@ export function FooterCTA() {
               </h2>
 
               <p className="text-lg sm:text-xl text-muted-foreground text-pretty">
-                Não perca a oportunidade de estar no evento que vai transformar sua carreira em tecnologia.
+                Um evento feito para quem está começando e quer entender, na prática,
+                como dar os primeiros passos na carreira em tecnologia.
               </p>
+
             </div>
 
             {/* FORM */}
@@ -81,7 +84,7 @@ export function FooterCTA() {
                 type="submit"
                 size="lg"
                 disabled={loading}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-14 px-8"
+                className="cursor-pointer bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-14 px-8"
               >
                 {loading ? "Enviando..." : "Garanta Sua Vaga"}
               </Button>
@@ -118,10 +121,11 @@ export function FooterCTA() {
             </div>
           </div>
         </div>
-
-        <footer className="container mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-border relative z-10">
+        <div className="relative z-20">
+          <FaqSection />
+        </div>        <footer className="container mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-border relative z-10">
           <div className="text-center text-sm text-muted-foreground">
-            <p>© 2025 Tech Start Summit. Todos os direitos reservados.</p>
+            <p>© 2026 Tech Start Summit. Todos os direitos reservados.</p>
             <p className="mt-2">Realização: Rede Unificada Acadêmica Tech do Paraná</p>
           </div>
         </footer>
