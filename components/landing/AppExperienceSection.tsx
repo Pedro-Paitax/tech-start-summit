@@ -59,7 +59,7 @@ export function AppExperienceSection() {
 
           <Button
             size="lg"
-            onClick={() => window.open("https://app.techstartsummit.com.br", "_blank")}
+            onClick={() => window.open("https://app.techstartsummit.com.br/agenda", "_blank")}
             className="cursor-pointer bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-6 h-auto"
           >
             Acessar o app do evento →
