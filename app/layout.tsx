@@ -1,4 +1,21 @@
-import { Metadata } from "next";
+import type React from "react"
+import type { Metadata } from "next"
+import { Montserrat, Inter } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import { Tracking } from "./Tracking";
+
+import "./globals.css"
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700", "800", "900"],
+  variable: "--font-heading",
+})
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+})
 
 export const metadata: Metadata = {
   title: {
@@ -32,4 +49,20 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="pt-BR">
+      <body className={`${montserrat.variable} ${inter.variable} font-sans antialiased`}>
+        <Tracking />
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  )
 }
