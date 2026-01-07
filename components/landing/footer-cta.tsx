@@ -32,6 +32,13 @@ export function FooterCTA() {
         throw new Error("Erro ao enviar lead")
       }
 
+window.gtag?.("event", "generate_lead", {
+  method: "footer_form",
+  origem: "site_footer",
+});
+
+window.clarity?.("set", "lead", "true");
+
       toast.success("Inscrição realizada com sucesso! 🎉")
       setEmail("")
     } catch (error) {

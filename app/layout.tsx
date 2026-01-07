@@ -2,6 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Montserrat, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { Tracking } from "./Tracking";
+
 import "./globals.css"
 
 const montserrat = Montserrat({
@@ -46,6 +48,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${montserrat.variable} ${inter.variable} font-sans antialiased`}>
+        <Tracking />
         {children}
         <Analytics />
       </body>
