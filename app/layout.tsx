@@ -1,57 +1,35 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Montserrat, Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import { Tracking } from "./Tracking";
-
-import "./globals.css"
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700", "800", "900"],
-  variable: "--font-heading",
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-body",
-})
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tech Start Summit - A Jornada da Inovação",
-  description: "O Ponto de Virada para o Talento de TI. Conectando academia e mercado.",
-  generator: "v0.app",
-  icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+  title: {
+    default: "Tech Start Summit | Evento de tecnologia para iniciantes",
+    template: "%s | Tech Start Summit",
   },
-}
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html lang="pt-BR">
-      <body className={`${montserrat.variable} ${inter.variable} font-sans antialiased`}>
-        <Tracking />
-        {children}
-        <Analytics />
-      </body>
-    </html>
-  )
+  description:
+    "O Tech Start Summit é um evento de tecnologia pensado para calouros e iniciantes em TI. Aprenda com especialistas e dê o primeiro passo na carreira.",
+
+  metadataBase: new URL("https://techstartsummit.com.br"),
+
+  openGraph: {
+    title: "Tech Start Summit",
+    description:
+      "Evento de tecnologia focado em calouros e iniciantes em TI.",
+    url: "https://techstartsummit.com.br",
+    siteName: "Tech Start Summit",
+    locale: "pt_BR",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Tech Start Summit",
+    description:
+      "Evento de tecnologia para quem está começando na área de TI.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
