@@ -26,8 +26,10 @@ export const metadata: Metadata = {
   description:
     "O Tech Start Summit é um evento de tecnologia pensado para calouros e iniciantes em TI. Aprenda com especialistas e dê o primeiro passo na carreira.",
 
-  metadataBase: new URL("https://techstartsummit.com.br"),
-
+  metadataBase: new URL("https://www.techstartsummit.com.br"),
+  alternates: {
+    canonical: "https://www.techstartsummit.com.br/",
+  },
   openGraph: {
     title: "Tech Start Summit",
     description:
